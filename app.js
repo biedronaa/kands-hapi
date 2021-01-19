@@ -1,6 +1,7 @@
 const Hapi = require('hapi');
 const Mongoose = require('mongoose');
 
+
 const server = new Hapi.server({"host":"localhost", "port":4000});
 
 //change for yours url 
@@ -19,69 +20,13 @@ Mongoose.connect(url,connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
-const ServiceModel = require('./serviceModel');
+const ServiceController = require('./serviceController')
+server.route({method:"GET", path:"/service", handler: ServiceController.services_all});
+server.route({method:"GET", path:"/service/{id}", handler: ServiceController.service_byID});
+server.route({method:"POST", path:"/service", handler: ServiceController.service_create});
+server.route({method:"PUT", path:"/service/{id}", handler: ServiceController.service_update});
+server.route({method:"DELETE", path:"/service/{id}", handler: ServiceController.service_delete});
 
-server.route({
-    method:"GET",
-    path:"/service",
-    handler: async (req, h) => {
-        try {
-            var services = await ServiceModel.find().exec();
-            return h.response(services);
-        } catch (error) {
-            return h.response(error).code(500);
-        }
-    }
-});
-server.route({
-    method:"GET",
-    path:"/service/{id}",
-    handler: async (req, h) => {
-        try {
-            var service = await ServiceModel.findById(req.params.id).exec();
-            return h.response(service);
-        } catch (error) {
-            return h.response(error).code(500);
-        }
-    }
-});
-server.route({
-    method:"POST",
-    path:"/service",
-    handler: async (req, h) => {
-        try {
-            var service = new ServiceModel(req.payload);
-            var result = await service.save();
-            return h.response(result);
-        } catch (error) {
-            return h.response(error).code(500);
-        }
-    }
-});
-server.route({
-    method:"PUT",
-    path:"/service/{id}",
-    handler: async (req, h) => {
-        try {
-            var service = await ServiceModel.findByIdAndUpdate(req.params.id, req.payload, {new: true}).exec();
-            return h.response(service);
-        } catch (error) {
-            return h.response(error).code(500);
-        }
-    }
-});
-server.route({
-    method:"DELETE",
-    path:"/service/{id}",
-    handler: async (req, h) => {
-        try {
-            var service = await ServiceModel.findByIdAndDelete(req.params.id).exec();
-            return h.response(service);
-        } catch (error) {
-            return h.response(error).code(500);
-        }
-    }
-});
 server.start((err) => {  
     if (err) {
         throw err;
