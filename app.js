@@ -1,5 +1,4 @@
 const Hapi = require('hapi');
-const { number, string } = require('joi');
 const Mongoose = require('mongoose');
 
 const server = new Hapi.server({"host":"localhost", "port":3000});
@@ -20,11 +19,7 @@ Mongoose.connect(url,connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
-
-const ServiceModel = Mongoose.model("service", {
-    name: String,
-    price: Number
-});
+const ServiceModel = require('./serviceModel');
 
 server.route({
     method:"GET",
