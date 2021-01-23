@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const ServiceModel = mongoose.Schema({
-    _id: mongoose.Types.ObjectId,
     name: {
-    type: String,
-    required: true,
-    unique: true},
+        type: String,
+        required: true,
+        unique: true
+    },
     price: {
-    type: Number,
-    required: true
+        type: Number,
+        required: true
     }
 });
 

@@ -2,7 +2,7 @@ const Hapi = require('hapi');
 const Mongoose = require('mongoose');
 
 
-const server = new Hapi.server({"host":"localhost", "port":4000});
+const server = new Hapi.server({host:"localhost", port:4000, routes: { cors: {origin: ['*']}}});
 
 //change for yours url 
 const url = `mongodb+srv://<username>:<password>@clusterapi.r1kyj.mongodb.net/<dbname>?retryWrites=true&w=majority`;
