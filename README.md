@@ -8,13 +8,12 @@ Rest API for kands project using Hapi.js, Mongoose with MongoDB.
 * [HTTP methods](#http-methods)
 
 #### General info
-Project was created as a site for an imaginary company providing cleaning services of various surfaces. It has a feature of calculating the approximate cost of the service by using REST API data from another project mentioned above.
+REST API created as api for https://github.com/biedronaa/kands.
 
 #### Technologies
-* React.js 17.0.1
-* Bootstrap 5
-* HTML5
-* CSS3
+* node.js 12.16.1
+* hapi 18.1.0
+* mongoose 5.11.12
 
 #### Setup
 Go here https://dev.to/dalalrohit/how-to-connect-to-mongodb-atlas-using-node-js-k9i and check how to create MongoDB database. Take your connection url and paste in app.js instead of example one. 
@@ -65,7 +64,7 @@ To run the project properly add this data to your database by using Postman.
 Use API by Postman or go to https://github.com/biedronaa/kands and check it out.
 
 #### HTTP methods
-* GET
+* GET (all and by ID)
 * POST
 * PUT
 * DELETE
