@@ -23,7 +23,7 @@ Next, run server typing in the terminal:
 node app.js
 ```
 
-To run the project properly add this data to your database by using Postman.
+To run the project properly add this data to your database by using Postman, the url is <strong>http://localhost:4000/service</strong>.
 ```json
 [
 	{
@@ -60,6 +60,10 @@ To run the project properly add this data to your database by using Postman.
 	}
 ]
 ```
+Example: 
+<div>
+	<a href="https://ibb.co/gj9Dzwy"><img src="https://i.ibb.co/QbQ6rn9/ss3.png" alt="ss3" border="0"></a>
+</div>
 
 Use API by Postman or go to https://github.com/biedronaa/kands and check it out.
 
