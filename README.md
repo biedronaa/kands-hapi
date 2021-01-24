@@ -65,8 +65,8 @@ Example:
 <a href="https://ibb.co/HP6MGc8"><img src="https://i.ibb.co/WzZdBrJ/ss3.png" alt="ss3" border="0"></a>
 
 
-Use API by Postman or go to https://github.com/biedronaa/kands and check it out.
-
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/jDR8VdQ/1.png" alt="1" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/J2Vcqdh/2.png" alt="2" border="0"></a>
 #### HTTP methods
 * GET (all and by ID)
 * POST
