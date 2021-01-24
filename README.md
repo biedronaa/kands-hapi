@@ -61,9 +61,9 @@ To run the project properly add this data to your database by using Postman, the
 ]
 ```
 Example: 
-<div>
+
 	<a href="https://ibb.co/PC5r74Q"><img src="https://i.ibb.co/4NjF6Md/ss3-Easy-Resize-com-1.jpg" alt="ss3-Easy-Resize-com-1" border="0"></a>
-</div>
+
 
 Use API by Postman or go to https://github.com/biedronaa/kands and check it out.
 
