@@ -47,3 +47,5 @@ To run the project properly add this data to your database by using Postman.
 	}
 ]
 ```
+#### Usage
+Use API by Postman or go to https://github.com/biedronaa/kands and check it out.
